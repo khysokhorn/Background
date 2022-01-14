@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BgApplication</string>
+    <string name="please_check_your_connection_try_again">please check your connection try again</string>
+    <string name="your_acc_log_with_other_device">your acc log with other device</string>
+    <string name="something_went_wrong_try_again_later">something went wrong try again later</string>
+    <string name="time_out_please_check_your_connection_try_again">time out please chec kyou rconnection try again</string>
+
+</resources>
