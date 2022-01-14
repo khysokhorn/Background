@@ -31,10 +31,11 @@ class MainActivity : AppCompatActivity() {
         val appNotification = AppNotification()
         val fakeJsonViewModel = FakeJsonViewModel()
         val application = AppLocation(this)
-        application.fetchLocation()
+
 
         val i = Intent(applicationContext, LocationUpdateService::class.java)
         startService(i)
+
         binding.btn.setOnClickListener {
             appNotification.showNotification(
                 this, this.getString(R.string.app_name), "New Message"

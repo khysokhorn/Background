@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit
 
 
 class LocationUpdateService : Service() {
+
     private var mFusedLocationClient: FusedLocationProviderClient? = null
     private var locationRequest: LocationRequest? = null
     private val TAG = "LocationServices"
@@ -47,6 +48,7 @@ class LocationUpdateService : Service() {
             val workRequest = PeriodicWorkRequestBuilder<UploadWorker>(1, TimeUnit.SECONDS)
                 .setInputData(data)
                 .build()
+
             WorkManager.getInstance(this@LocationUpdateService).enqueue(workRequest)
             //Share/Publish Location
         }
@@ -77,8 +79,6 @@ class LocationUpdateService : Service() {
                 it,
                 locationCallback, Looper.myLooper()!!
             )
-
-
         }
     }
 
